@@ -1,0 +1,11 @@
+create user Atricky@localhost identified as 'Atricky';
+
+select user from mysql.user;
+
+create role employer;
+grant all on * . * to employer;
+show grants for employer;
+revoke UPDATE,INSERT on * . * from employer;
+
+
+CREATE INDEX number ON student (StudentName ASC);
